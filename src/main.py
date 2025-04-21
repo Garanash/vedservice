@@ -8,7 +8,7 @@ application = FastAPI()
 
 
 @application.get('/')
-def start_page(request: Request):
+async def start_page(request: Request):
     return templates.TemplateResponse('index.html', {'request': request})
 
 
